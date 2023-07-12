@@ -5,23 +5,8 @@ using namespace std;
 string ltrim(const string &);
 string rtrim(const string &);
 
-
-
-int main()
-{
-    string n_temp,n_feed_back;
-    getline(cin, n_temp);
-
-    int n = stoi(ltrim(rtrim(n_temp)));
-
-    n_feed_back=check_number(n);
-
-    count<< n_feed_back;
-
-    return 0;
-}
-
 string check_number(int n){
+    string s_number;
     if(n==1)
         return "one";
     else if(n==2)
@@ -43,6 +28,20 @@ string check_number(int n){
     else
         return "Greater than 9";
 }    
+
+int main()
+{
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+    cout<< check_number(n);
+
+    return 0;
+}
+
+
     
 
 string ltrim(const string &str) {
