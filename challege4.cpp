@@ -10,18 +10,17 @@ std::string numberToText(int number) {
     if (number >= 1 && number <= 9) 
         return numbers[number];
     else if (number%2)
-        cout << "even";
+        return "odd";
     else
-        cout << "odd"; 
+        return "even"; 
 
-    return "Number out of range";
 }
 
 int main() {
     int num1, num2;
     cin >> num1 >> num2;
-    for (int num_print= num1; num_print<num2;num_print++){
-        cout << numberToText(num_print)<<"\n"; 
+    for (int i= num1; i<1+num2;i++){
+        cout << numberToText(i)<<"\n"; 
     }  
     return 0;
 }
