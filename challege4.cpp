@@ -9,7 +9,7 @@ std::string numberToText(int number) {
 
     if (number >= 1 && number <= 9) 
         return numbers[number];
-    else if ( number%2)
+    else if (number%2)
         cout << "even";
     else
         cout << "odd"; 
