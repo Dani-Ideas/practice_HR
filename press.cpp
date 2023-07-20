@@ -7,13 +7,15 @@ int main() {
     noecho();             // No mostrar las teclas presionadas en la pantalla
     keypad(stdscr, true); // Habilitar lectura de teclas especiales
 
-    printw("Presiona 'a' para detectar si fue presionada. Presiona 'q' para salir.\n");
+    printw("Presiona 'd' para detectar si fue presionada. Presiona 'q' para salir.\n");
     refresh();
 
     int ch;
     while ((ch = getch()) != 'q') { // Salir del bucle si se presiona 'q'
-        if (ch == 'a') {
-            printw("Tecla 'a' fue presionada!\n");
+        if (ch == '1') {
+            printw("Enero\n");
+        } else if (ch== '2'){
+            printw("Febrero\n");
         }
         refresh();
     }
