@@ -1,14 +1,17 @@
 #include <iostream>
-#include <cstdio>
-using namespace std;
+#include <stack>
 
 int main() {
-    int number;
-    long number2;
-    char letter;
-    float number3;
-    double number4;
-    scanf("%d %ld %c %f %lf",&number,&number2,&letter,&number3,&number4);
-    printf("%d \n%ld \n%c \n%.3f \n%.9lf",number,number2,letter,number3,number4);
+    std::stack<int> myStack;
+
+    myStack.push(1);
+    myStack.push(2);
+    myStack.push(3);
+
+    while (!myStack.empty()) {
+        std::cout << myStack.top() << " ";
+        myStack.pop();
+    }
+    std::cout << std::endl;
     return 0;
 }
