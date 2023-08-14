@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int Npc::number_elemets=0;
+//int Npc::number_elemets=0;
 
 class Npc {
     private:
@@ -15,7 +15,7 @@ class Npc {
         Npc(string name_input,int age_input){
             this-> name=name_input;
             this-> age = age_input;
-            number_elemets++;
+  //          number_elemets+=1;
         }
         ~Npc(){
             cout << name<<" fue eliminado";
@@ -41,6 +41,13 @@ class Npc {
         }
 };
 
+int check_if_number(string intput){
+    int verification= stoi(intput);
+    if(verification>0&&verification<4)
+        return verification;
+    else 
+        return 0;
+}
 
 int main (){
     Npc *carlos=new Npc ("Carlos de la O",42);
@@ -53,4 +60,18 @@ int main (){
     Npc *juan=new Npc("Carlos Pedocles Poncho",10);
     juan->Say_hello(); 
 
+
+    string user_interaction;
+    cout <<"Escoje una opcion: \n1-modificar un valor de un NPC \n2-Eliminar un NPC\n3-Crear un NPC\n";
+    cin >> user_interaction;
+    int choose=check_if_number(user_interaction);
+    if (choose==1){
+        cout<<"Despelgando menu:\n";
+    }else if (choose==2){
+        cout<<"Despelgando menu para eliminar:\n";
+    }else if (choose==3){
+        cout<<"Despelgando menu para ¡¡Crear vidaaaa!!:\n";
+    }else 
+        cout <<"Opción invalida\n";
+    //return 0;
 }
